@@ -1,0 +1,32 @@
+def pounds_to_kilograms(pounds):
+    kilograms = pounds * 0.45
+    return kilograms
+
+
+def kilograms_to_pounds(kilograms):
+    pounds = kilograms / 0.45
+    return pounds
+
+
+def main():
+    try:
+        choice = int(input("Choose conversion direction:\n1. Pounds to Kilograms\n2. Kilograms to Pounds\n Enter 1 or 2: "))
+
+
+        if choice == 1:
+            pounds = float(input('Enter your weight in pounds: '))
+            kilograms = pounds_to_kilograms(pounds)
+            print(f'{pounds} pounds is equal to {kilograms:.2f} kilograms.')
+        elif choice == 2:
+            kilograms = float(input('Enter weight in kilograms: '))
+            pounds = kilograms_to_pounds()
+            print(f"{kilograms} kilograms is equal to {pounds:.2f} pound.")
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
+
+if __name__ == '__main__':
+    main()
+
